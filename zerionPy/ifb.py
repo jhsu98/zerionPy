@@ -16,6 +16,16 @@ class ifbResponse():
         self.status_code = status_code
         self.response = response
 
+    def __str__(self):
+        return str(self.status_code)
+
+    def __repr__(self):
+        return str(self.status_code)
+
+    def __iter__(self):
+        for item in self.response:
+            yield item
+
 class IFB():
     def __init__(self, server:str, region:str, client_key:str, client_secret:str, version:float, simple_response:bool=False, skip_rate_limit_retry:bool=False):
         if not all((server, client_key, client_secret, version, region)):

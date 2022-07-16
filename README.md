@@ -50,5 +50,7 @@ This library is a work in progress. As Zerion APIs are released, this library wi
 
 # Change Log
 
+- July 15, 2022 (v1.1.0)
+    - Added __str__, __repr__, and __iter__ to ifbResponse class
 - June 18, 2022 (v1.0.0)
     - Initial Release
