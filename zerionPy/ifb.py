@@ -406,8 +406,8 @@ class IFB():
     def getPage(self, profile_id, page_id):
         return self.__request(inspect.currentframe().f_code.co_name, ids=(profile_id, page_id))
 
-    def copyPage(self, profile_id, body, params=None):
-        return self.__request(inspect.currentframe().f_code.co_name, ids=(profile_id, ), body=body, params=params)
+    def copyPage(self, profile_id, page_id):
+        return self.__request(inspect.currentframe().f_code.co_name, ids=(profile_id, page_id))
 
     def postPages(self, profile_id, body):
         return self.__request(inspect.currentframe().f_code.co_name, ids=(profile_id, ), body=body)
