@@ -7,7 +7,7 @@ zerionPy is an easy-to-use API wrapper for Zerion Software's iFormBuilder. The g
 To begin, install the module.
 
 ```
-npm install zerionPy
+pip install zerionPy
 ```
 
 After the module is installed, import it using the following command in your Python file:
