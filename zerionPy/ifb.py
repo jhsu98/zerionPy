@@ -44,6 +44,7 @@ class IFB():
         self.__region = region
         self.__isSimpleResponse = simple_response
         self.__isSkipRateLimitRetry = skip_rate_limit_retry
+        self.__isZIM = "." in client_key
 
         self.__api_calls = 0
         self.__access_token = None
@@ -62,6 +63,9 @@ class IFB():
                     self.__host = f'https://{self.__server}.iformbuilder.com/exzact/api/v60'
                     self.__token_url = f'https://{self.__server}.iformbuilder.com/exzact/api/oauth/token'
             
+            if self.__isZIM:
+                self.__token_url = "https://qa-identity.zerionsoftware.com/oauth2/token" if self.__region == "qa" else "https://identity.zerionsoftware.com/oauth2/token"
+
             self.__requestAccessToken()
         except Exception as e:
             print(e)
