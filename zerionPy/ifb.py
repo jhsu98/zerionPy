@@ -34,7 +34,7 @@ class IFB():
         if version not in (6, 8, 8.1):
             raise ValueError("Invalid version")
 
-        if region not in ('us','uk','au','hipaa','qa'):
+        if region not in ('us', 'uk', 'au', 'hipaa', 'qa', 'sandbox'):
             raise ValueError("Invalid region")
 
         self.__server = server
@@ -64,7 +64,7 @@ class IFB():
                     self.__token_url = f'https://{self.__server}.iformbuilder.com/exzact/api/oauth/token'
             
             if self.__isZIM:
-                self.__token_url = "https://qa-identity.zerionsoftware.com/oauth2/token" if self.__region == "qa" else "https://identity.zerionsoftware.com/oauth2/token"
+                self.__token_url = "https://qa-identity.zerionsoftware.com/oauth2/token" if self.__region in ("qa", "sandbox") else "https://identity.zerionsoftware.com/oauth2/token"
 
             self.__requestAccessToken()
         except Exception as e:

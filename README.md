@@ -50,6 +50,8 @@ This library is a work in progress. As Zerion APIs are released, this library wi
 
 # Change Log
 
+- February 1, 2023 (v1.1.3)
+    - Added support for `sandbox` region
 - January 31, 2023 (v1.1.2)
     - added support for ZIM/User Management api apps
 - October 5, 2022 (v1.1.1)
